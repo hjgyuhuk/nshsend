@@ -26,9 +26,11 @@ description: Static facts of this project — goal, global invariants, and envir
 - UI requires `nsh` CLI (`>=0.7`), with GTK 4.14+ on Linux; Linux native file/folder dialogs prefer the xdg-desktop-portal FileChooser via a minimal stdlib-only D-Bus client in `desktopdialog` (the calling connection must stay alive until Response), falling back to `zenity` or `kdialog`; path open/reveal uses `xdg-open`.
 - `nsh.json` declares explicit `capabilities`; `capabilities.process.execute` accepts bare executable names or absolute paths only.
 - Linux distribution is a self-contained AppImage built by `scripts/package-appimage.sh`: `nsh package --target linux --format appimage` bundles the TSX app + NSH runtime but not the Go sidecar, so the script copies `bin/nshsend-core` into the AppDir's `usr/bin/` and prepends it to `PATH` in `AppRun`, then re-runs `appimagetool`. `process.spawn("nshsend-core")` resolves the bundled binary via the inherited `PATH`. Requires `appimagetool` (auto-downloaded to `bin/`) and system GTK 4 / WebKitGTK at runtime.
+- macOS distribution is a self-contained `.app` built by `scripts/package-mac.sh` (must run on a Mac): `nsh package --target macos` bundles the TSX app + NSH runtime but not the Go sidecar. Bare `process.spawn` names resolve through the host `PATH` only and a Finder-launched app inherits launchd's minimal `PATH`, so the script copies `bin/nshsend-core` into `Contents/MacOS/`, renames the runner to `NshSend-bin`, and makes the main executable a wrapper that prepends its own directory to `PATH` before `exec`'ing the runner (the runner still locates `Contents/Resources/nsh` via `current_exe()`), then re-signs ad hoc (`codesign --force --deep --sign -`). Ad hoc runs only on the building Mac; Developer ID signing/notarization is not handled.
 - Verification commands:
   - `./scripts/build-core.sh`
   - `cd core && go vet ./... && go test -race -timeout 30s -v ./...`
   - `nsh check`
   - `nsh test`
   - `./scripts/package-appimage.sh` (Linux AppImage)
+  - `./scripts/package-mac.sh` (macOS .app, on a Mac)
