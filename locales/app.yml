@@ -1,0 +1,392 @@
+_version: 2
+
+# 通用
+common.cancel:
+  zh-CN: "取消"
+  en: "Cancel"
+common.add:
+  zh-CN: "添加"
+  en: "Add"
+common.remove:
+  zh-CN: "移除"
+  en: "Remove"
+common.delete:
+  zh-CN: "删除"
+  en: "Delete"
+common.copy:
+  zh-CN: "复制"
+  en: "Copy"
+common.open:
+  zh-CN: "打开"
+  en: "Open"
+common.clear:
+  zh-CN: "清空"
+  en: "Clear"
+common.loading:
+  zh-CN: "处理中..."
+  en: "Working..."
+common.unknownError:
+  zh-CN: "未知错误"
+  en: "Unknown error"
+common.fileProgress:
+  zh-CN: "文件 %{current} / %{total}"
+  en: "File %{current} / %{total}"
+
+# 导航
+nav.receive:
+  zh-CN: "接收"
+  en: "Receive"
+nav.send:
+  zh-CN: "发送"
+  en: "Send"
+nav.history:
+  zh-CN: "历史"
+  en: "History"
+nav.settings:
+  zh-CN: "设置"
+  en: "Settings"
+
+# 应用外壳
+app.coreOnline:
+  zh-CN: "核心在线"
+  en: "Core online"
+app.coreStarting:
+  zh-CN: "正在启动"
+  en: "Starting"
+app.coreError:
+  zh-CN: "连接异常"
+  en: "Connection error"
+app.coreUnavailableTitle:
+  zh-CN: "无法连接到 Go 核心服务"
+  en: "Cannot connect to the Go core service"
+app.coreUnavailableHint:
+  zh-CN: "请确认已构建 bin/nshsend-core"
+  en: "Make sure bin/nshsend-core has been built"
+app.coreExited:
+  zh-CN: "核心服务已退出 (code=%{code}, signal=%{signal})"
+  en: "Core service exited (code=%{code}, signal=%{signal})"
+app.retryConnection:
+  zh-CN: "重试连接"
+  en: "Retry connection"
+
+# 托盘
+tray.showWindow:
+  zh-CN: "显示主窗口"
+  en: "Show main window"
+
+# 接收页
+receive.title:
+  zh-CN: "接收"
+  en: "Receive"
+receive.subtitle:
+  zh-CN: "本机设备信息与局域网接收状态"
+  en: "Local device info and LAN receive status"
+receive.fingerprint:
+  zh-CN: "指纹 %{fingerprint}"
+  en: "Fingerprint %{fingerprint}"
+receive.listening:
+  zh-CN: "监听中 :%{port}"
+  en: "Listening :%{port}"
+receive.serverStopped:
+  zh-CN: "服务未启动"
+  en: "Service not running"
+receive.httpPlain:
+  zh-CN: "HTTP 明文"
+  en: "HTTP plaintext"
+receive.localIps:
+  zh-CN: "本机可用 IP"
+  en: "Available local IPs"
+receive.noInterface:
+  zh-CN: "未检测到非回环网络接口"
+  en: "No non-loopback network interface detected"
+receive.quickSave:
+  zh-CN: "快速保存"
+  en: "Quick save"
+receive.quickSaveDesc:
+  zh-CN: "开启后自动接收来自局域网设备的传输请求，无需逐次确认"
+  en: "Automatically accept incoming transfers from LAN devices without confirming each one"
+receive.inProgress:
+  zh-CN: "正在接收"
+  en: "Receiving"
+receive.cancelReceive:
+  zh-CN: "取消接收"
+  en: "Cancel receive"
+receive.lastText:
+  zh-CN: "最近接收的文本"
+  en: "Recently received text"
+receive.copied:
+  zh-CN: "已复制"
+  en: "Copied"
+receive.copyText:
+  zh-CN: "复制文本"
+  en: "Copy text"
+receive.offerTitle:
+  zh-CN: "来自 %{alias} 的传输请求"
+  en: "Transfer request from %{alias}"
+receive.offerDescription:
+  zh-CN: "%{ip} · 共 %{count} 项 (%{size})"
+  en: "%{ip} · %{count} items (%{size})"
+receive.decline:
+  zh-CN: "拒绝"
+  en: "Decline"
+receive.accept:
+  zh-CN: "接收"
+  en: "Accept"
+receive.mtlsVerified:
+  zh-CN: "mTLS 证书已验证"
+  en: "mTLS certificate verified"
+receive.unverified:
+  zh-CN: "未验证连接"
+  en: "Unverified connection"
+receive.statusFinished:
+  zh-CN: "已接收 %{count} 个文件并保存至 %{dir}"
+  en: "Received %{count} files, saved to %{dir}"
+receive.statusFinishedText:
+  zh-CN: "已接收文本消息"
+  en: "Received a text message"
+receive.statusCancelled:
+  zh-CN: "接收已取消"
+  en: "Receive cancelled"
+receive.statusFailed:
+  zh-CN: "接收失败：%{error}"
+  en: "Receive failed: %{error}"
+
+# 发送页
+send.title:
+  zh-CN: "发送"
+  en: "Send"
+send.subtitle:
+  zh-CN: "添加文件、文件夹或文本后选择接收设备"
+  en: "Add files, folders, or text, then choose a receiving device"
+send.dropHint:
+  zh-CN: "松开以添加拖入的文件"
+  en: "Release to add the dragged files"
+send.stageHint:
+  zh-CN: "待发送内容（支持直接拖入文件或文件夹）"
+  en: "Ready to send (drag files or folders here)"
+send.pickFiles:
+  zh-CN: "选择文件"
+  en: "Choose files"
+send.pickFolder:
+  zh-CN: "选择文件夹"
+  en: "Choose folder"
+send.clipboard:
+  zh-CN: "剪贴板"
+  en: "Clipboard"
+send.addText:
+  zh-CN: "添加文本"
+  en: "Add text"
+send.stageEmpty:
+  zh-CN: "尚未添加任何文件或文本"
+  en: "No files or text added yet"
+send.inProgress:
+  zh-CN: "正在发送"
+  en: "Sending"
+send.cancelSend:
+  zh-CN: "取消发送"
+  en: "Cancel send"
+send.waitingConfirm:
+  zh-CN: "等待对方确认"
+  en: "Waiting for confirmation"
+send.waitingConfirmDesc:
+  zh-CN: "已发送传输请求，等待接收方响应..."
+  en: "Transfer request sent, waiting for the receiver..."
+send.cancelRequest:
+  zh-CN: "取消请求"
+  en: "Cancel request"
+send.enterPin:
+  zh-CN: "输入 PIN"
+  en: "Enter PIN"
+send.nearbyDevices:
+  zh-CN: "附近设备"
+  en: "Nearby devices"
+send.nearbyHint:
+  zh-CN: "点击设备即可开始发送"
+  en: "Click a device to start sending"
+send.scan:
+  zh-CN: "扫描设备"
+  en: "Scan devices"
+send.manualAdd:
+  zh-CN: "手动添加 IP"
+  en: "Add IP manually"
+send.noDevices:
+  zh-CN: "暂未发现附近设备"
+  en: "No nearby devices found yet"
+send.noDevicesHint:
+  zh-CN: "请确保接收端处于同一局域网并已开启 NshSend / LocalSend，或手动输入 IP 添加"
+  en: "Make sure the receiver is on the same LAN with NshSend / LocalSend running, or add it by IP"
+send.httpsVerified:
+  zh-CN: "HTTPS 已验证"
+  en: "HTTPS verified"
+send.textModalTitle:
+  zh-CN: "添加文本消息"
+  en: "Add a text message"
+send.textLabel:
+  zh-CN: "文本内容"
+  en: "Text content"
+send.textPlaceholder:
+  zh-CN: "输入要发送的文本..."
+  en: "Type the text to send..."
+send.manualModalTitle:
+  zh-CN: "手动添加设备"
+  en: "Add a device manually"
+send.manualModalDesc:
+  zh-CN: "输入目标设备的局域网 IP 和监听端口"
+  en: "Enter the device's LAN IP and listening port"
+send.connectAdd:
+  zh-CN: "连接并添加"
+  en: "Connect and add"
+send.ipLabel:
+  zh-CN: "IP 地址"
+  en: "IP address"
+send.portLabel:
+  zh-CN: "端口"
+  en: "Port"
+send.useHttps:
+  zh-CN: "使用 HTTPS / mTLS"
+  en: "Use HTTPS / mTLS"
+send.pinTitle:
+  zh-CN: "需要接收 PIN"
+  en: "Receive PIN required"
+send.pinDesc:
+  zh-CN: "向 %{alias} 发送需要验证 PIN"
+  en: "Sending to %{alias} requires a PIN"
+send.submitSend:
+  zh-CN: "提交并发送"
+  en: "Submit and send"
+send.pinLabel:
+  zh-CN: "PIN 码"
+  en: "PIN"
+send.pinPlaceholder:
+  zh-CN: "输入接收端 PIN"
+  en: "Enter the receiver's PIN"
+send.stagedText:
+  zh-CN: "文本: %{preview}"
+  en: "Text: %{preview}"
+send.statusFinished:
+  zh-CN: "发送完成"
+  en: "Send complete"
+send.statusCancelled:
+  zh-CN: "发送已取消"
+  en: "Send cancelled"
+send.statusPinRequired:
+  zh-CN: "对方设备需要输入 PIN 码"
+  en: "The receiving device requires a PIN"
+send.statusFailed:
+  zh-CN: "发送失败：%{error}"
+  en: "Send failed: %{error}"
+send.clipboardEmpty:
+  zh-CN: "剪贴板中没有文件或文本"
+  en: "No files or text in the clipboard"
+send.stageFirst:
+  zh-CN: "请先添加要发送的文件或文本"
+  en: "Add files or text to send first"
+
+# 历史页
+history.title:
+  zh-CN: "接收历史"
+  en: "Receive history"
+history.subtitle:
+  zh-CN: "最近接收的文件与文本记录"
+  en: "Recently received files and text"
+history.clearAll:
+  zh-CN: "清空历史"
+  en: "Clear history"
+history.empty:
+  zh-CN: "暂无接收记录"
+  en: "No receive records yet"
+history.emptyHint:
+  zh-CN: "完成的文件或文本传输将显示在这里"
+  en: "Completed file or text transfers will appear here"
+history.textBadge:
+  zh-CN: "文本"
+  en: "Text"
+history.from:
+  zh-CN: "来自 %{alias} · %{time}"
+  en: "From %{alias} · %{time}"
+history.reveal:
+  zh-CN: "显示位置"
+  en: "Show location"
+history.copiedNotice:
+  zh-CN: "已复制文本到剪贴板"
+  en: "Text copied to clipboard"
+
+# 设置页
+settings.title:
+  zh-CN: "设置"
+  en: "Settings"
+settings.subtitle:
+  zh-CN: "设备名称、网络监听、保存目录与安全选项"
+  en: "Device name, network listening, save directory, and security"
+settings.language:
+  zh-CN: "语言"
+  en: "Language"
+settings.languageSystem:
+  zh-CN: "跟随系统"
+  en: "Follow system"
+settings.general:
+  zh-CN: "常规与网络"
+  en: "General & network"
+settings.alias:
+  zh-CN: "设备别名"
+  en: "Device alias"
+settings.port:
+  zh-CN: "监听端口"
+  en: "Listening port"
+settings.portHelper:
+  zh-CN: "修改端口、HTTPS 或 PIN 后会自动重启本地服务"
+  en: "Changing the port, HTTPS, or PIN restarts the local service"
+settings.httpsToggle:
+  zh-CN: "启用 HTTPS / mTLS 加密"
+  en: "Enable HTTPS / mTLS encryption"
+settings.httpsDesc:
+  zh-CN: "开启双向 TLS 证书校验与指纹验证（推荐）"
+  en: "Mutual TLS certificate and fingerprint verification (recommended)"
+settings.receiveSecurity:
+  zh-CN: "接收与安全"
+  en: "Receiving & security"
+settings.saveDir:
+  zh-CN: "保存目录"
+  en: "Save directory"
+settings.browse:
+  zh-CN: "浏览"
+  en: "Browse"
+settings.quickSaveDesc:
+  zh-CN: "自动接收所有传入传输请求"
+  en: "Automatically accept all incoming transfer requests"
+settings.pinLabel:
+  zh-CN: "接收 PIN 码（可选）"
+  en: "Receive PIN (optional)"
+settings.pinPlaceholder:
+  zh-CN: "留空表示不需要 PIN"
+  en: "Leave empty to require no PIN"
+settings.verifyChecksums:
+  zh-CN: "校验文件 SHA-256"
+  en: "Verify file SHA-256"
+settings.verifyChecksumsDesc:
+  zh-CN: "接收完成后比对发送方提供的 SHA-256 摘要"
+  en: "Compare the sender's SHA-256 digest after receiving"
+settings.portInvalid:
+  zh-CN: "端口必须是 1 到 65535 之间的整数"
+  en: "Port must be an integer between 1 and 65535"
+settings.saved:
+  zh-CN: "设置已保存并生效"
+  en: "Settings saved and applied"
+settings.saveApply:
+  zh-CN: "保存并应用"
+  en: "Save and apply"
+settings.diagnostics:
+  zh-CN: "诊断日志"
+  en: "Diagnostic logs"
+settings.diagnosticsSubtitle:
+  zh-CN: "核心服务运行日志 (core.log)"
+  en: "Core service log (core.log)"
+settings.refreshLogs:
+  zh-CN: "刷新日志"
+  en: "Refresh logs"
+settings.openLogFile:
+  zh-CN: "打开日志文件"
+  en: "Open log file"
+settings.logsEmptyHint:
+  zh-CN: "点击“刷新日志”查看最近的核心运行与网络报错记录"
+  en: "Click \"Refresh logs\" to see recent core activity and network errors"

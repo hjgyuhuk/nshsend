@@ -1,0 +1,29 @@
+{
+  "name": "NshSend",
+  "id": "dev.nshsend.app",
+  "version": "0.1.0",
+  "build": 1,
+  "icon": "icon.png",
+  "entry": "app/App.tsx",
+  "theme": "app/theme.json",
+  "appearance": "system",
+  "singleInstance": true,
+  "window": {
+    "title": "NshSend",
+    "defaultSize": { "width": 980, "height": 680 },
+    "minSize": { "width": 640, "height": 480 }
+  },
+  "capabilities": {
+    "process": {
+      "execute": ["nshsend-core", "nshsend-core.exe"]
+    },
+    "fs": {
+      "read": ["${dataDir}", "${pluginDir}"],
+      "write": ["${dataDir}"]
+    },
+    "clipboard": true,
+    "windows": true,
+    "application": true,
+    "host": ["sidecar.*"]
+  }
+}
