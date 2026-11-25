@@ -3,7 +3,11 @@
   "id": "dev.nshsend.app",
   "version": "0.1.0",
   "build": 1,
-  "icon": "icon.png",
+  "icon": {
+    "macos": "icon-macos.png",
+    "linux": "icon.png",
+    "windows": "icon.png"
+  },
   "entry": "app/App.tsx",
   "theme": "app/theme.json",
   "appearance": "system",
